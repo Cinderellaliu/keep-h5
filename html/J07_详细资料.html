@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="grey-bg">
+<div class="top-title">
+     <a href="#" class="left-a">
+        <div class="back-btn back-btn01 pull-left" onclick="history.go(-1)"></div><div class="return-left pull-left" href="#">返回</div>
+        <span class="top-title-middle">详细资料</span>
+    </a>
+</div>
+<div class="main-content no-margin position">
+    <div class="user-img-box">
+        <a href=""><img src="../images/person01.png" alt=""></a>
+        <span class="bind bg-blue01">已绑定</span>
+    </div>
+    <a href="javascript:void(0)" class="clearfix box-item">
+        <span class="pull-left">自设称呼</span>
+        <span class="pull-right inp-box">陈广斌</span>
+    </a>
+    <a href="javascript:void(0)" class="clearfix box-item">
+        <span class="pull-left">微信昵称</span>
+        <span class="pull-right inp-box">沙漠旅行者</span>
+    </a>
+    <a href="javascript:void(0)" class="clearfix box-item">
+        <span class="inp-box inp-box01"><input type="text" placeholder="增加备注称呼......"></span>
+    </a>
+    <div class="extra-info-box">
+        <h3>附加信息：</h3>
+        <p>我是陈广斌，赶紧通过。</p>
+    </div>
+    <a href="javascript:void(0)" class="clearfix box-item box-item-border">
+        <span class="pull-left">性别</span>
+        <span class="pull-right inp-box">男</span>
+    </a>
+    <a href="#" class="esc-bind pass-bind" data-toggle="modal" data-target="#myModal">通过会员申请</a>
+    <a href="#" class="esc-bind nopass-bind">拒绝会员申请</a>
+    <div class="modal fade detail-modal-box" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog detail-modal">
+        <div class="modal-content">
+            <a href="#" class="modal-item box-item-border">
+                <span>整合到已有未绑定会员信息里</span>
+            </a>
+            <a href="#" class="modal-item">
+                <span>新建一条会员信息</span>
+            </a>
+        </div>
+        <button type="button" class="btn btn-default detail-modal-btn" data-dismiss="modal">取消</button>
+    </div>
+</div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="grey-bg">
+<div class="top-title">
+     <a href="#" class="left-a">
+        <div class="back-btn back-btn01 pull-left" onclick="history.go(-1)"></div><div class="return-left pull-left" href="#">选择会员</div>
+    </a>
+    <span class="top-title-middle">新增课程</span>
+    <a href="#" class="change-pi" data-toggle="modal" data-target="#myModal">添加</a>
+</div>
+<div class="main-content margin ">
+    <div class="box-item">
+        <span>2017年9月30日周六</span>
+    </div>
+    <div class="box-item box-item02 clearfix">
+        <span class="pull-left left" >
+            <h4>未能确定当日具体时间</h4>
+            <p>将在提前一天晚21时提醒双方设置具体时间</p>
+        </span>
+        <span class="switch-bar01 pull-right"><i></i></span>
+    </div>
+    <div class="box-item select-time clearfix">
+        <span class="pull-left left" >开始时间</span>
+        <input type="text" id="demo1" class="pull-right date-select" value="18:30">
+    </div>
+    <div class="box-item select-time clearfix">
+        <span class="pull-left left" >结束时间</span>
+        <input type="text" id="demo2" name="" class="pull-right date-select" value="19:30">
+    </div>
+    <a href="J03_重复.html" class="box-item clearfix box-item-border">
+        <span class="pull-left">重复</span>
+        <span class="right-arrow pull-right"><img src="../images/right_arrow.png" alt=""></span>
+        <div class="pull-right week-box">
+            <span>周一</span>
+            <span>周三</span>
+            <span>周六</span>
+        </div>
+    </a>
+    <a href="#" class="box-item clearfix box-item-border lesson-margin">
+        <span class="pull-left">私人事件</span>
+        <span class="right-arrow pull-right"><img src="../images/right_arrow.png" alt=""></span>
+    </a>
+    <div class="lesson-select-box">
+        <span>以下选填</span>
+    </div>
+    <a href="#" class="box-item clearfix">
+        <input type="text" class="myself-inp" placeholder="事务描述">
+    </a>
+    <textarea class="describe-text remarks-margin" placeholder="备注"></textarea>
+    <div class="box-item clearfix">
+        <span class="pull-left left" >本段备注用户可见</span>
+        <span class="switch-bar02 pull-right open"><i class="open"></i></span>
+    </div>
+</div>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog repeat-modal success-modal">
+        <div class="modal-content">
+            <h2>课程添加成功，并已通知会员</h2>
+            <a href="#" class="back-btn reset-btn" data-dismiss="modal">ok</a>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/datePicker.js"></script>
+<script>
+     $(function(){
+        $(".switch-bar01").click(function(){
+            $(this).toggleClass("open");
+            $(this).children("i").toggleClass("open");
+            //开关效果
+            $(this).parent().siblings('.select-time').toggleClass('sel-time-hide');
+        });
+        $(".switch-bar02").click(function(){
+            $(this).toggleClass("open");
+            $(this).children("i").toggleClass("open");
+        });
+    });
+    var calendar = new datePicker();
+    calendar.init({
+        'trigger': '#demo1', /*按钮选择器，用于触发弹出插件*/
+        'type': 'time',/*模式：date日期；datetime日期时间；time时间；ym年月；*/
+        'minDate':'1900-1-1',/*最小日期*/
+        'maxDate':'2100-12-31',/*最大日期*/
+        'onSubmit':function(){/*确认时触发事件*/
+            var theSelectData=calendar.value;
+        },
+        'onClose':function(){/*取消时触发事件*/
+        }
+    });
+    var calendar1 = new datePicker();
+    calendar1.init({
+        'trigger': '#demo2', /*按钮选择器，用于触发弹出插件*/
+        'type': 'time',/*模式：date日期；datetime日期时间；time时间；ym年月；*/
+        'minDate':'1900-1-1',/*最小日期*/
+        'maxDate':'2100-12-31',/*最大日期*/
+        'onSubmit':function(){/*确认时触发事件*/
+            var theSelectData=calendar.value;
+        },
+        'onClose':function(){/*取消时触发事件*/
+        }
+    });
+</script>
+</body>
+</html>

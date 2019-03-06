@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/media.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="grey-bg">
+<div class="top-title">
+    我
+    <a class="change-pi" href="">修改头像</a>
+</div>
+<div class="main-content padd-bottom">
+    <div class="top-img">
+        <img src="../images/man01.png" alt="">
+        <div class="cover-bot">
+            <div class="list-zan pull-left">
+                <div class="left-zan">
+                    <img src="../images/fabulous.png" alt="">
+                    <span>给你点个赞：231</span>
+                </div>
+            </div>
+            <div class="list-batch pull-left">
+                <div class="left-zan">
+                    <img src="../images/batch.png" alt="">
+                    <span>求换个头像：121</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="infor-my clearfix">
+        <span class="name-my pull-left">姓名</span>
+        <span class="oh-my pull-right"><input type="text" value="任同政"></span>
+    </div>
+    <div class="infor-my clearfix">
+        <span class="name-my pull-left">性别</span>
+        <span class="oh-my dis-my pull-right"><input type="text" value="男"></span>
+    </div>
+    <div class="infor-my clearfix">
+        <span class="name-my pull-left">登录手机号码</span>
+        <span class="oh-my pull-right"><input type="text" name="" value="18601357693"></span>
+    </div>
+    <a class="infor-my have-question album clearfix" href="">
+        <span class="name-my pull-left">相册</span>
+        <img src="../images/go_right.png" alt="" class="pull-right">
+        <span class="oh-my have-num pull-right">271</span>
+    </a>
+    <a class="right-now-time clearfix" href="">
+        <button>立刻获取永久免费资格</button>
+        <span class="red-dot"></span>
+    </a>
+    <div class="about-reconment">
+        推荐3位教练使用身材觉醒，即可获得永久免费资格。首批仅限500名教练。
+    </div>
+    <div class="infor-my heve-border-top clearfix">
+        <span class="name-my pull-left">身高</span>
+        <span class="oh-my pull-right"><input type="text" value="---"></span>
+    </div>
+    <div class="infor-my clearfix">
+        <span class="name-my pull-left">体重</span>
+        <span class="oh-my pull-right"><input type="text" value="--"></span>
+    </div>
+    <div class="infor-my margin-class heve-border-top clearfix">
+        <span class="name-my pull-left">每日约课开始时间</span>
+        <span class="oh-my pull-right"><input type="text" value="09:00"></span>
+    </div>
+    <div class="infor-my clearfix">
+        <span class="name-my pull-left">每日约课结束时间</span>
+        <span class="oh-my pull-right"><input type="text" value="22:00"></span>
+    </div>
+    <div class="infor-my clearfix">
+        <span class="name-my pull-left">每节课前提醒我</span>
+        <span class="oh-my pull-right"><span class="switch-bar01 pull-right"><i></i></span>
+        </span>
+    </div>
+    <div class="infor-my clearfix">
+        <span class="name-my pull-left">允许用户查看我的日程安排</span>
+        <span class="oh-my pull-right"><span class="switch-bar01 pull-right"><i></i></span>
+        </span>
+    </div>
+    <a class="infor-my have-question clearfix" href="">
+        <span class="name-my pull-left">问题及建议</span>
+        <span class="oh-my pull-right"><img src="../images/go_right.png" alt=""></span>
+    </a>
+    <div class="new-edition">
+        <button>更新为最新版本</button>
+    </div>
+    <div class="Sign-out">
+        <button>退出登录</button>
+    </div>
+</div>
+<div class="bottom-section clearfix">
+    <a href="#"><span></span><p>日历排期</p></a>
+    <a href="#"><span></span><p>会员列表</p></a>
+    <a href="#" class="active"><span></span><p>我</p><i class="dot-here"></i></a>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
+<script>
+    $(function(){
+        $(".switch-bar01").click(function(){
+            $(this).toggleClass("open");
+            $(this).children("i").toggleClass("open");
+            //开关效果
+        })
+    });
+</script>

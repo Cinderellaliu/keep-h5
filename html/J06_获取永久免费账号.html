@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="main-content">
+    <ul class="use-ul free-account clearfix">
+    	<li class="pull-left"><a href="#tab01" id="nav" class="active">获取方法</a></li><span class="pull-left line"></span>
+    	<li class="pull-left"><a href="#tab02">操作记录</a></li>
+    </ul>
+    <div id="tab01"  class="deadlin-box01 free-box margin clearfix">
+    	<div class="d-top">
+    		<span>让更多教练使用身材觉醒</span>
+    	</div>
+    	<div class="d-box-padding ">
+	    	<div class="d-content02">
+	    		<div class="border clearfix">
+	    			<div class="success-box">
+                        <img src="../images/free_img01.png" alt="">
+                    </div>
+	    			<a href="#" class="recommend">立刻到微信向其他教练推荐</a>
+	    		</div>
+	    		<div class="tel-box clearfix">
+	    			<h3>或者——</h3>
+	    			<p class="p1">告诉我们，你最近几天，所推荐过的教练的手机号码。</p>
+                    <p class="p2">你可以先口头推荐别的教练下载苹果app“身材觉醒教练端”，然后再到这里记录下该教练的电话号码。</p>
+	    			<input type="text" class="inp" placeholder="输入所推荐过教练的手机号码" >
+	    			<a href="#" class="pull-right btn">认领我推荐的教练</a>
+	    		</div>
+	    	</div>
+    	</div>
+    </div>
+    <div id="tab02" class="deadlin-box01 suc-record-box record-box">
+    	<div class="d-top">
+    		<span>成功进行推荐教练使用的记录</span>
+    	</div>
+    	<a href="javascript:void(0);" class="item-box clearfix">
+    		<div class="pull-left">
+                <h3>邱大帅</h3>
+                <span>18512345678</span>
+            </div>
+    		<div class="pull-right right">
+    			<h4><em>7</em>月<i>10</i>日</h4>
+    		</div>
+    	</a>
+    	<a href="javascript:void(0);" class="item-box clearfix">
+            <div class="pull-left">
+                <h3>王教练</h3>
+                <span>18512345678</span>
+            </div>
+            <div class="pull-right right">
+                <h4><em>7</em>月<i>03</i>日</h4>
+            </div>
+        </a>
+        <div class="less-box">
+            <span>还差<em>1</em>位就可以获得VIP-永久免费账户</span>
+        </div>
+    </div>
+</div>
+<!-- 模态框（Modal） -->
+<div class="modal fade free-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+    <div class="modal-dialog free-modal-box">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</NOtton>
+                <h4 class="modal-title" id="myModalLabel">认领提示</h4>
+            </div>
+            <div class="modal-body">你好</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">知道了</NOtton>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.modal -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script>
+	$(function(){
+		$('.use-ul>li').click(function(){
+			$(this).find('a').addClass('active');
+			$(this).siblings().find('a').removeClass('active');
+		})
+		$('#nav').on('click',function(){
+		$('body,html').animate({scrollTop:0},100)
+	})
+	})
+</script>
+</body>
+</html>

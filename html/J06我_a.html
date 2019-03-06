@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/webuploader.css" />
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/media.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="grey-bg">
+<div class="top-title">
+     <a href="#" class="left-a">
+        <div class="back-btn back-btn01 pull-left" onclick="history.go(-1)"></div><div class="return-left pull-left" href="#">我</div>
+    </a>
+    <span class="top-title-middle">问题及建议</span>
+</div>
+<div class="main-content no-padding">
+    <div class="about-question clearfix">
+        <p class="specific-description">具体描述</p>
+        <textarea name="" id="" cols="30" rows="10" placeholder="请填写10个字以上的描述，以便我们提供更好的帮助" class="help-about" minlength="10"></textarea>
+        <div class="main-upload main-box">
+            <div class="main-title">图片（选填，提供问题截图） <p class="main-upload-progress pull-right"><span class="main-upload-num">0</span>/6</p></div>
+            <div class="main-up clearfix">
+                <div id="pic-list" class="main-up-list"></div>
+                <div id="add-pic" class="pull-left"><img src="../images/add.png" class="main-up-add pull-left" alt="添加图片"></div>
+            </div>
+        </div>
+        <p class="specific-description contant-num">联系电话</p>
+        <input type="text" placeholder="选填，便于我们与你联系" class="description-inp">
+        <button class="sub">提交</button>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/webuploader.min.js" type="text/javascript"></script>
+</body>
+</html>
+<script>
+    var num = 0;
+    var uploader = WebUploader.create({
+        auto:true,
+        swf: '../css/Uploader.swf',
+        // server: '../js/up.php',
+        pick: '#add-pic',
+        resize: false,
+        fileNumLimit: 6,
+    });
+    uploader.on( 'fileQueued', function( file ) {
+        var item =$('<div class="main-up-box pull-left"><div id="'+file.id+'"class="file-item thumbnail">'+'<img class="main-up-pic">'+'</div>'+'<div class="info text-center">'+file.name+'</div></div>');
+        var img = item.find('img');
+        uploader.makeThumb(file,function(error,src){
+            str = file.name;
+             if (str != "") {
+                var pos = "." + str.replace(/.+\./, "");
+                if(pos == '.gif'||pos == '.jpg'||pos =='.jpeg'||pos =='.bmp'||pos =='.png'){
+                    img[0].src=src;
+                }
+                else{
+                    img[0].src= "../images/cute.jpg";
+                }
+                
+            }
+            
+        },73,73);//图片尺寸
+        $('#pic-list').append(item);
+    });
+    uploader.on( 'uploadComplete', function( file ) {
+        $('.main-upload-num').text(++num);//上传增加图片
+    })
+</script>

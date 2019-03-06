@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="grey-bg">
+<div class="top-title">
+     <a href="#" class="left-a">
+        <div class="back-btn back-btn01 pull-left" onclick="history.go(-1)"></div><div class="return-left pull-left" href="#">选择会员</div>
+    </a>
+    <span class="top-title-middle">新增课程</span>
+    <a href="#" class="change-pi" data-toggle="modal" data-target="#myModal">添加</a>
+</div>
+<div class="main-content margin margin-bottom ">
+    <div class="box-item">
+        <span>2017年9月30日周六</span>
+    </div>
+    <div class="box-item box-item02 clearfix">
+        <span class="pull-left left" >
+            <h4>未能确定当日具体时间</h4>
+            <p>将在提前一天晚21时提醒双方设置具体时间</p>
+        </span>
+        <span class="switch-bar01 pull-right"><i></i></span>
+    </div>
+    <div class="box-item select-time clearfix">
+        <span class="pull-left left" >开始时间</span>
+        <input type="text" id="demo1" class="pull-right date-select" value="18:30">
+    </div>
+    <div class="box-item select-time clearfix">
+        <span class="pull-left left" >结束时间</span>
+        <input type="text" id="demo2" name="" class="pull-right date-select" value="19:30">
+    </div>
+    <a href="J03_重复.html" class="box-item clearfix box-item-border">
+        <span class="pull-left">重复</span>
+        <span class="right-arrow pull-right"><img src="../images/right_arrow.png" alt=""></span>
+        <div class="pull-right week-box">
+            <span>周一</span>
+            <span>周三</span>
+            <span>周六</span>
+        </div>
+    </a>
+    <a href="#" class="box-item clearfix box-item-border lesson-margin">
+        <span class="pull-left">学员：陈广斌</span>
+        <span class="right-arrow pull-right"><img src="../images/right_arrow.png" alt=""></span>
+    </a>
+    <div class="lesson-select-box">
+        <span>以下选填</span>
+    </div>
+    <a href="#" class="box-item clearfix">
+        <span class="pull-left">
+        锻炼内容</span>
+        <span class="right-arrow pull-right"><img src="../images/right_arrow.png" alt=""></span>
+        <div class="pull-right week-box">
+            <span>增肌</span>
+            <span>拉伸</span>
+        </div>
+    </a>
+    <a href="#" class="box-item clearfix box-item-border">
+        <span class="pull-left">
+        增肌部位</span>
+        <span class="right-arrow pull-right"><img src="../images/right_arrow.png" alt=""></span>
+        <div class="pull-right week-box">
+            <span>胸</span>
+            <span>背</span>
+        </div>
+    </a>
+    <textarea class="describe-text remarks-margin" placeholder="备注，如锻炼前请先热身，或者具体动作列表……"></textarea>
+    <div class="box-item clearfix">
+        <span class="pull-left left" >本段备注用户可见</span>
+        <span class="switch-bar02 pull-right open"><i class="open"></i></span>
+    </div>
+</div>
+<div class="discuss-footer clearfix">
+    <a class="pull-left btn-item text-blue" data-toggle="modal" data-target="#myModal01">保存修改</a>
+    <a class="pull-left btn-item text-green" data-toggle="modal" data-target="#myModal02">完成课程</a>
+    <a class="pull-left btn-item" data-toggle="modal" data-target="#myModal03">删除课程</a>
+</div>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog repeat-modal success-modal">
+        <div class="modal-content">
+            <h2>课程添加成功，并已通知会员</h2>
+            <a href="#" class="back-btn reset-btn" data-dismiss="modal">ok</a>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<div class="modal fade" id="myModal01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog repeat-modal repeat-modal01">
+        <div class="modal-content">
+            <a href="#" class="back-btn">仅修改本节课程</a>
+            <a href="#" class="back-btn reset-btn">同时修改本系列余下所有课程</a>
+            <a href="#" class="back-btn reset-btn">退出且不更改设置</a>
+        </div><!-- /.modal-content -->
+        <div class="modal-footer01">
+            <a href="#" class="back-btn" data-dismiss="modal">取消</a>
+        </div>
+    </div><!-- /.modal -->
+</div>
+<div class="modal fade" id="myModal02" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog repeat-modal repeat-modal01">
+        <div class="modal-content">
+            <a href="javascript:void(0)" class="back-btn">确定课程已经完成</a>
+        </div><!-- /.modal-content -->
+        <div class="modal-footer01">
+            <a href="#" class="back-btn" data-dismiss="modal">确定</a>
+            <a href="#" class="back-btn" data-dismiss="modal">取消</a>
+        </div>
+    </div><!-- /.modal -->
+</div>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal03" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog repeat-modal repeat-modal01">
+        <div class="modal-content">
+            <a href="#" class="back-btn">仅删除本节课程</a>
+            <a href="#" class="back-btn reset-btn">删除同系列余下所有课程</a>
+        </div><!-- /.modal-content -->
+        <div class="modal-footer01">
+            <a href="#" class="back-btn" data-dismiss="modal">取消</a>
+        </div>
+    </div><!-- /.modal -->
+</div>
+<!-- 发送通知模态框 -->
+<div class="modal fade" id="myModal06" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog repeat-modal send-message-modal">
+        <div class="modal-content">
+            <a class="person-img">
+                <img src="../images/man01.png" alt="">
+                <div class="change-img">修改头像</div>
+            </a>
+            <h2>发送正式上课通知</h2>
+            <p>以网页链接形式发送正式上课通知，附上你的形象照、上课内容和课前提醒。而且省去在微信重复文字输入的麻烦</p>
+            <a href="#" class="send-message-btn">一键发送上课微信通知</a>
+            <a href="#" class="send-message-btn01">通过微信长期绑定会员</a>
+        </div><!-- /.modal-content -->
+        <div class="delete-box" data-dismiss="modal">
+            <img src="../images/delete01.png" alt="">
+        </div>
+    </div><!-- /.modal -->
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/datePicker.js"></script>
+<script>
+     $(function(){
+        $(".switch-bar01").click(function(){
+            $(this).toggleClass("open");
+            $(this).children("i").toggleClass("open");
+            //开关效果
+            $(this).parent().siblings('.select-time').toggleClass('sel-time-hide');
+        });
+        $(".switch-bar02").click(function(){
+            $(this).toggleClass("open");
+            $(this).children("i").toggleClass("open");
+        });
+    });
+    var calendar = new datePicker();
+    calendar.init({
+        'trigger': '#demo1', /*按钮选择器，用于触发弹出插件*/
+        'type': 'time',/*模式：date日期；datetime日期时间；time时间；ym年月；*/
+        'minDate':'1900-1-1',/*最小日期*/
+        'maxDate':'2100-12-31',/*最大日期*/
+        'onSubmit':function(){/*确认时触发事件*/
+            var theSelectData=calendar.value;
+        },
+        'onClose':function(){/*取消时触发事件*/
+        }
+    });
+    var calendar1 = new datePicker();
+    calendar1.init({
+        'trigger': '#demo2', /*按钮选择器，用于触发弹出插件*/
+        'type': 'time',/*模式：date日期；datetime日期时间；time时间；ym年月；*/
+        'minDate':'1900-1-1',/*最小日期*/
+        'maxDate':'2100-12-31',/*最大日期*/
+        'onSubmit':function(){/*确认时触发事件*/
+            var theSelectData=calendar.value;
+        },
+        'onClose':function(){/*取消时触发事件*/
+        }
+    });
+</script>
+</body>
+</html>

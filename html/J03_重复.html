@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="grey-bg">
+<div class="top-title">
+     <a href="#" class="left-a">
+        <div class="back-btn back-btn01 pull-left" onclick="history.go(-1)"></div><div class="return-left pull-left" href="#">返回</div>
+    </a>
+    <span class="top-title-middle">重复</span>
+    <a href="#" class="change-pi" data-toggle="modal" data-target="#myModal">设置</a>
+</div>
+<div class="main-content no-margin">
+    <div class="invite-box-top">
+        <span>您已设置09月30日周六为上课日期，如需设置重复课程，请务必涵盖周六</span>
+    </div>
+    <div class="invite-box-content">
+        <a href="#" class="box-item clearfix">
+            <span class="pull-left">每周一</span>
+            <div class="invoice pull-right">
+                <input type="checkbox" id="check-add" class="check-add01">
+                <label for="check-add"></label>
+            </div>     
+        </a>
+        <a href="#" class="box-item clearfix">
+            <span class="pull-left">每周二</span>
+            <div class="invoice pull-right">
+                <input type="checkbox" id="check-add01" class="check-add01">
+                <label for="check-add01"></label>
+            </div>     
+        </a>
+        <a href="#" class="box-item clearfix">
+            <span class="pull-left">每周三</span>
+            <div class="invoice pull-right">
+                <input type="checkbox" id="check-add02" class="check-add01">
+                <label for="check-add02"></label>
+            </div>     
+        </a>
+        <a href="#" class="box-item clearfix">
+            <span class="pull-left">每周四</span>
+            <div class="invoice pull-right">
+                <input type="checkbox" id="check-add03" class="check-add01">
+                <label for="check-add03"></label>
+            </div>     
+        </a>
+        <a href="#" class="box-item clearfix">
+            <span class="pull-left">每周五</span>
+            <div class="invoice pull-right">
+                <input type="checkbox" id="check-add04" class="check-add01">
+                <label for="check-add04"></label>
+            </div>     
+        </a>
+        <a href="#" class="box-item clearfix">
+            <span class="pull-left">每周六</span>
+            <div class="invoice pull-right">
+                <input type="checkbox" checked="checked" id="check-add05" class="check-add01">
+                <label for="check-add05"></label>
+            </div>     
+        </a>
+        <a href="#" class="box-item clearfix">
+            <span class="pull-left">每周日</span>
+            <div class="invoice pull-right">
+                <input type="checkbox" id="check-add06" class="check-add01">
+                <label for="check-add06"></label>
+            </div>     
+        </a>
+    </div>
+</div>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog repeat-modal">
+        <div class="modal-content">
+            <h2>设置有矛盾</h2>
+            <p>2017年9月30日是周六，不是你所选的<span>周一</span>、<span>周三</span>，因此需要做出如下选择：</p>
+            <a href="#" class="back-btn" data-dismiss="modal">清除所有重复设置并返回</a>
+            <a href="#" class="back-btn reset-btn" data-dismiss="modal">重新设置</a>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script>
+</script>
+</body>
+</html>

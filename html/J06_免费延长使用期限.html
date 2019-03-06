@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="main-content">
+    <ul class="use-ul clearfix">
+    	<li class="pull-left"><a href="#tab01" id="nav" class="active">延长方法</a></li><span class="pull-left line"></span>
+    	<li class="pull-left"><a href="#tab02">延长记录</a></li><span class="pull-left line"></span>
+    	<li class="pull-left"><a href="#tab03">收费标准</a></li>
+    </ul>
+    <div class="deadline-box">
+    	<span>你的免费使用期限到</span>
+    	<h2 class="date"><span>19</span>年<span>03</span>月<span>02</span>日</h2>
+    	<span>还剩余</span>
+    	<p><span>05</span>个月<span>07</span>天</p>
+    	<span>完成以下操作就可以大幅延长免费使用期限</span>
+    </div>
+    <div id="tab01"  class="deadlin-box01">
+    	<div class="d-top">
+    		<span>让更多教练使用身材觉醒</span>
+    	</div>
+    	<div class="d-box-padding">
+	    	<div class="d-content01">
+	    		<h4>成功推荐一位教练使用身材觉醒</h4>
+	    		<h4>免费使用期延长——</h4>
+	    	</div>
+	    	<div class="d-content02">
+	    		<div class="border clearfix">
+	    			<h3><span>3</span>个月</h3>
+	    			<a href="#" class="recommend">立刻到微信向其他教练推荐</a>
+	    		</div>
+	    		<div class="tel-box clearfix">
+	    			<h3>或者——</h3>
+	    			<p>告诉我们，你最近几天，所推荐过的教练的手机号码</p>
+	    			<input type="text" class="inp" placeholder="输入所推荐过教练的手机号码" >
+	    			<a href="#" class="pull-right btn">认领我推荐的教练</a>
+	    		</div>
+	    	</div>
+    	</div>
+    </div>
+    <div class="deadlin-box01 deadlin-box02">
+    	<div class="d-top">
+    		<span>向会员发送微信上课通知</span>
+    	</div>
+    	<div class="d-box-padding">
+	    	<div class="d-content01">
+	    		<h4>通过微信向上课会员发送一次正式的上课通知，</h4>
+	    		<h4>免费使用期延长——</h4>
+	    	</div>
+	    	<div class="d-content02">
+	    		<div class="border clearfix">
+	    			<h3><span>3</span>个月</h3>
+	    		</div>
+	    		<div class="tel-box clearfix">
+	    			<h3>以下课程你还没发正式上课通知——</h3>
+	    			<p><span>刘东南，</span><span>07月12日19：00</span></p>
+	    			<a href="#" class="recommend">立刻到微信向刘东南发送微信通知</a>
+	    		</div>
+	    	</div>
+    	</div>
+    </div>
+    <div id="tab02" class="deadlin-box01 record-box">
+    	<div class="d-top">
+    		<span>曾经获得延长免费使用时长的记录</span>
+    	</div>
+    	<a href="#" class="item-box clearfix">
+    		<span class="pull-left">推荐了<em>3</em>位教练</span>
+    		<div class="pull-right right">
+    			<span>延长<em>10</em>个月</span>
+    			<img src="../images/right_arrow.png" alt="">
+    		</div>
+    	</a>
+    	<a href="#" class="item-box clearfix">
+    		<span class="pull-left">发出<em>23</em>次上课通知</span>
+    		<div class="pull-right right">
+    			<span>延长<em>77</em>天</span>
+    			<img src="../images/right_arrow.png" alt="">
+    		</div>
+    	</a>
+    	<a href="#" class="item-box clearfix">
+    		<span class="pull-left">合计</span>
+    		<div class="pull-right right">
+    			<span>延长<em>11</em>个月<i>07</i>天</span>
+    		</div>
+    	</a>
+    </div>
+    <div id="tab03" class="deadlin-box01 method-box">
+    	<div class="d-top">
+    		<span>收费标准及支付方式</span>
+    	</div>
+    	<div class="pay">
+    		<p><em>118</em>元/年</p>
+    		<p><em>38</em>元/季度</p>
+    		<p><em>118</em>元/月</p>
+    	</div>
+    	<div class="account">
+    		<p>费用汇至支付宝账号：<em>.....%...￥</em></p>
+    		<p>汇款时请在备注说明你的登录手机号</p>
+    	</div>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script>
+	$(function(){
+		$('.use-ul>li').click(function(){
+			$(this).find('a').addClass('active');
+			$(this).siblings().find('a').removeClass('active');
+		})
+		$('#nav').on('click',function(){
+		$('body,html').animate({scrollTop:208},100)
+	})
+	})
+</script>
+</body>
+</html>
